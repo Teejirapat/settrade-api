@@ -1,0 +1,9 @@
+[default]
+app_id = FEQMciqMxXaniDuc
+app_secret = XD8MmC3N1LIhSY/I2FFxZBCCmhgYQ37ITJ2mftAKNBA=
+broker_id = SANDBOX
+app_code = SANDBOX
+account_no = 262007-D
+pin = 000000
+port = 5000
+type = 0
