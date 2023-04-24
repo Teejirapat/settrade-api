@@ -1,0 +1,3 @@
+พิมพ์commandนี้ลง terminal ของ vs code
+
+pip install -r requirements.txt

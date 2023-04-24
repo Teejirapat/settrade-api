@@ -9,20 +9,20 @@ class INVESTOR_DERIVATIVES:
             deri = investor.Derivatives(account_no=account_no)
             account_info = deri.get_account_info()
             #0
-            callForceFlag = account_info['callForceFlag'] #1
-            callForceMargin = account_info['callForceMargin'] #2
-            callForceMarginMM = account_info['callForceMarginMM'] #3
-            cashBalance = account_info['cashBalance'] #4
-            closingMethod = account_info['closingMethod'] #5
-            creditLine = account_info['creditLine'] #6
-            depositWithdrawal = account_info['depositWithdrawal'] #7
-            equity = account_info['equity'] #8
-            excessEquity = account_info['excessEquity'] #9
-            initialMargin = account_info['initialMargin'] #10
-            liquidationValue = account_info['liquidationValue'] #11
-            totalFM = account_info['totalFM'] #12
-            totalMM = account_info['totalMM'] #13
-            totalMR = account_info['totalMR'] #14
+            callForceFlag = account_info.get('callForceFlag') #1
+            callForceMargin = account_info.get('callForceMargin') #2
+            callForceMarginMM = account_info.get('callForceMarginMM') #3
+            cashBalance = account_info.get('cashBalance') #4
+            closingMethod = account_info.get('closingMethod') #5
+            creditLine = account_info.get('creditLine') #6
+            depositWithdrawal = account_info.get('depositWithdrawal') #7
+            equity = account_info.get('equity') #8
+            excessEquity = account_info.get('excessEquity') #9
+            initialMargin = account_info.get('initialMargin') #10
+            liquidationValue = account_info.get('liquidationValue') #11
+            totalFM = account_info.get('totalFM') #12
+            totalMM = account_info.get('totalMM') #13
+            totalMR = account_info.get('totalMR') #14
 
             return f'1,{callForceFlag},{callForceMargin},{callForceMarginMM},{cashBalance},{closingMethod},{creditLine},{depositWithdrawal},{equity},{excessEquity},{initialMargin},{liquidationValue},{totalFM},{totalMM},{totalMR}'
         except SettradeError as e:
@@ -35,44 +35,44 @@ class INVESTOR_DERIVATIVES:
             order_info = deri.get_order(order_no=order_no)
 
             #0
-            accountNo = order_info['accountNo'] #1
-            balanceQty = order_info['balanceQty'] #2
-            canCancel = order_info['canCancel'] #3
-            canChange = order_info['canChange'] #4
-            cancelId = order_info['cancelId'] #5
-            cancelQty = order_info['cancelQty'] #6
-            cancelTime = order_info['cancelTime'] #7
-            cpm = order_info['cpm'] #8
-            entryId = order_info['entryId'] #9
-            entryTime = order_info['entryTime'] #10
-            icebergVol = order_info['icebergVol'] #11
-            isStopOrderNotActivate = order_info['isStopOrderNotActivate'] #12
-            matchQty = order_info['matchQty'] #13
-            orderNo = order_info['orderNo'] #14
-            position = order_info['position'] #15
-            price = order_info['price'] #16
-            priceDigit = order_info['priceDigit'] #17
-            priceType = order_info['priceType'] #18
-            qty = order_info['qty'] #19
-            rejectCode = order_info['rejectCode'] #20
-            rejectReason = order_info['rejectReason'] #21
-            showStatus = order_info['showStatus'] #22
-            side = order_info['side'] #23
-            status = order_info['status'] #24
-            statusMeaning = order_info['statusMeaning'] #25
-            symbol = order_info['symbol'] #26
-            terminalType = order_info['terminalType'] #27
-            tfxOrderNo = order_info['tfxOrderNo'] #28
-            trType = order_info['trType'] #29
-            tradeDate = order_info['tradeDate'] #30
-            transactionTime = order_info['transactionTime'] #31
-            triggerCondition = order_info['triggerCondition'] #32
-            triggerPrice = order_info['triggerPrice'] #33
-            triggerSession = order_info['triggerSession'] #34
-            triggerSymbol = order_info['triggerSymbol'] #35
-            validToDate = order_info['validToDate'] #36
-            validity = order_info['validity'] #37
-            version = order_info['version'] #38
+            accountNo = order_info.get('accountNo') #1
+            balanceQty = order_info.get('balanceQty') #2
+            canCancel = order_info.get('canCancel') #3
+            canChange = order_info.get('canChange') #4
+            cancelId = order_info.get('cancelId') #5
+            cancelQty = order_info.get('cancelQty') #6
+            cancelTime = order_info.get('cancelTime') #7
+            cpm = order_info.get('cpm') #8
+            entryId = order_info.get('entryId') #9
+            entryTime = order_info.get('entryTime') #10
+            icebergVol = order_info.get('icebergVol') #11
+            isStopOrderNotActivate = order_info.get('isStopOrderNotActivate') #12
+            matchQty = order_info.get('matchQty') #13
+            orderNo = order_info.get('orderNo') #14
+            position = order_info.get('position') #15
+            price = order_info.get('price') #16
+            priceDigit = order_info.get('priceDigit') #17
+            priceType = order_info.get('priceType') #18
+            qty = order_info.get('qty') #19
+            rejectCode = order_info.get('rejectCode') #20
+            rejectReason = order_info.get('rejectReason') #21
+            showStatus = order_info.get('showStatus') #22
+            side = order_info.get('side') #23
+            status = order_info.get('status') #24
+            statusMeaning = order_info.get('statusMeaning') #25
+            symbol = order_info.get('symbol') #26
+            terminalType = order_info.get('terminalType') #27
+            tfxOrderNo = order_info.get('tfxOrderNo') #28
+            trType = order_info.get('trType') #29
+            tradeDate = order_info.get('tradeDate') #30
+            transactionTime = order_info.get('transactionTime') #31
+            triggerCondition = order_info.get('triggerCondition') #32
+            triggerPrice = order_info.get('triggerPrice') #33
+            triggerSession = order_info.get('triggerSession') #34
+            triggerSymbol = order_info.get('triggerSymbol') #35
+            validToDate = order_info.get('validToDate') #36
+            validity = order_info.get('validity') #37
+            version = order_info.get('version') #38
 
             return f'1,{accountNo},{balanceQty},{canCancel},{canChange},{cancelId},{cancelQty},{cancelTime},{cpm},{entryId},{entryTime},{icebergVol},{isStopOrderNotActivate},{matchQty},{orderNo},{position},{price},{priceDigit},{priceType},{qty},{rejectCode},{rejectReason},{showStatus},{side},{status},{statusMeaning},{symbol},{terminalType},{tfxOrderNo},{trType},{tradeDate},{transactionTime},{triggerCondition},{triggerPrice},{triggerSession},{triggerSymbol},{validToDate},{validity},{version}'
         except SettradeError as e:
@@ -83,88 +83,17 @@ class INVESTOR_DERIVATIVES:
         try:
             deri = investor.Derivatives(account_no=account_no)
             order_list = deri.get_orders()
-
-            accountNo = ''
-            balanceQty = ''
-            canCancel = ''
-            canChange = ''
-            cancelId = ''
-            cancelQty = ''
-            cancelTime = ''
-            cpm = ''
-            entryId = ''
-            entryTime = ''
-            icebergVol = ''
-            isStopOrderNotActivate = ''
-            matchQty = ''
             orderNo = ''
-            position = ''
-            price = ''
-            priceDigit = ''
-            priceType = ''
-            qty = ''
-            rejectCode = ''
-            rejectReason = ''
-            showStatus = ''
-            side = ''
-            status = ''
-            statusMeaning = ''
-            symbol = ''
-            terminalType = ''
-            tfxOrderNo = ''
-            trType = ''
-            tradeDate = ''
-            transactionTime = ''
-            triggerCondition = ''
-            triggerPrice = ''
-            triggerSession = ''
-            triggerSymbol = ''
-            validToDate = ''
-            validity = ''
-            version = ''
             for i in range(len(order_list)):
 
                 #0
-                accountNo += ',' +str(order_list[i]['accountNo']) #1
-                balanceQty = order_list[i]['balanceQty'] #2
-                canCancel = order_list[i]['canCancel'] #3
-                canChange = order_list[i]['canChange'] #4
-                cancelId = order_list[i]['cancelId'] #5
-                cancelQty = order_list[i]['cancelQty'] #6
-                cancelTime = order_list[i]['cancelTime'] #7
-                cpm = order_list[i]['cpm'] #8
-                entryId = order_list[i]['entryId'] #9
-                entryTime = order_list[i]['entryTime'] #10
-                icebergVol = order_list[i]['icebergVol'] #11
-                isStopOrderNotActivate = order_list[i]['isStopOrderNotActivate'] #12
-                matchQty = order_list[i]['matchQty'] #13
-                orderNo = order_list[i]['orderNo'] #14
-                position = order_list[i]['position'] #15
-                price = order_list[i]['price'] #16
-                priceDigit = order_list[i]['priceDigit'] #17
-                priceType = order_list[i]['priceType'] #18
-                qty = order_list[i]['qty'] #19
-                rejectCode = order_list[i]['rejectCode'] #20
-                rejectReason = order_list[i]['rejectReason'] #21
-                showStatus = order_list[i]['showStatus'] #22
-                side = order_list[i]['side'] #23
-                status = order_list[i]['status'] #24
-                statusMeaning = order_list[i]['statusMeaning'] #25
-                symbol = order_list[i]['symbol'] #26
-                terminalType = order_list[i]['terminalType'] #27
-                tfxOrderNo = order_list[i]['tfxOrderNo'] #28
-                trType = order_list[i]['trType'] #29
-                tradeDate = order_list[i]['tradeDate'] #30
-                transactionTime = order_list[i]['transactionTime'] #31
-                triggerCondition = order_list[i]['triggerCondition'] #32
-                triggerPrice = order_list[i]['triggerPrice'] #33
-                triggerSession = order_list[i]['triggerSession'] #34
-                triggerSymbol = order_list[i]['triggerSymbol'] #35
-                validToDate = order_list[i]['validToDate'] #36
-                validity = order_list[i]['validity'] #37
-                version = order_list[i]['version'] #38
+                if(i==0):
+                   orderNo = str(order_list[i].get('orderNo')) #1     
+                
+                else:
+                   orderNo += ',' +str(order_list[i].get('orderNo')) #1   
 
-            return f'1,{accountNo},{balanceQty},{canCancel},{canChange},{cancelId},{cancelQty},{cancelTime},{cpm},{entryId},{entryTime},{icebergVol},{isStopOrderNotActivate},{matchQty},{orderNo},{position},{price},{priceDigit},{priceType},{qty},{rejectCode},{rejectReason},{showStatus},{side},{status},{statusMeaning},{symbol},{terminalType},{tfxOrderNo},{trType},{tradeDate},{transactionTime},{triggerCondition},{triggerPrice},{triggerSession},{triggerSymbol},{validToDate},{validity},{version}'
+            return f'1,{orderNo}'
         except SettradeError as e:
             return f'0,{e.code},{e}'
 
@@ -182,44 +111,44 @@ class INVESTOR_DERIVATIVES:
                 volume = volume,
             )
 
-            accountNo = place_order['accountNo']
-            balanceQty = place_order['balanceQty']
-            canCancel = place_order['canCancel']
-            canChange = place_order['canChange']
-            cancelId = place_order['cancelId']
-            cancelQty = place_order['cancelQty']
-            cancelTime = place_order['cancelTime']
-            cpm = place_order['cpm']
-            entryId = place_order['entryId']
-            entryTime = place_order['entryTime']
-            icebergVol = place_order['icebergVol']
-            isStopOrderNotActivate = place_order['isStopOrderNotActivate']
-            matchQty = place_order['matchQty']
-            orderNo = place_order['orderNo']
-            Position = place_order['position']
-            Price = place_order['price']
-            priceDigit = place_order['priceDigit']
-            priceType = place_order['priceType']
-            qty = place_order['qty']
-            rejectCode = place_order['rejectCode']
-            rejectReason = place_order['rejectReason']
-            showStatus = place_order['showStatus']
-            Side = place_order['side']
-            status = place_order['status']
-            statusMeaning = place_order['statusMeaning']
-            Symbol = place_order['symbol']
-            terminalType = place_order['terminalType']
-            tfxOrderNo = place_order['tfxOrderNo']
-            trType = place_order['trType']
-            tradeDate = place_order['tradeDate']
-            transactionTime = place_order['transactionTime']
-            triggerCondition = place_order['triggerCondition']
-            triggerPrice = place_order['triggerPrice']
-            triggerSession = place_order['triggerSession']
-            triggerSymbol = place_order['triggerSymbol']
-            validToDate = place_order['validToDate']
-            validity = place_order['validity']
-            version = place_order['version']
+            accountNo = place_order.get('accountNo')
+            balanceQty = place_order.get('balanceQty')
+            canCancel = place_order.get('canCancel')
+            canChange = place_order.get('canChange')
+            cancelId = place_order.get('cancelId')
+            cancelQty = place_order.get('cancelQty')
+            cancelTime = place_order.get('cancelTime')
+            cpm = place_order.get('cpm')
+            entryId = place_order.get('entryId')
+            entryTime = place_order.get('entryTime')
+            icebergVol = place_order.get('icebergVol')
+            isStopOrderNotActivate = place_order.get('isStopOrderNotActivate')
+            matchQty = place_order.get('matchQty')
+            orderNo = place_order.get('orderNo')
+            Position = place_order.get('position')
+            Price = place_order.get('price')
+            priceDigit = place_order.get('priceDigit')
+            priceType = place_order.get('priceType')
+            qty = place_order.get('qty')
+            rejectCode = place_order.get('rejectCode')
+            rejectReason = place_order.get('rejectReason')
+            showStatus = place_order.get('showStatus')
+            Side = place_order.get('side')
+            status = place_order.get('status')
+            statusMeaning = place_order.get('statusMeaning')
+            Symbol = place_order.get('symbol')
+            terminalType = place_order.get('terminalType')
+            tfxOrderNo = place_order.get('tfxOrderNo')
+            trType = place_order.get('trType')
+            tradeDate = place_order.get('tradeDate')
+            transactionTime = place_order.get('transactionTime')
+            triggerCondition = place_order.get('triggerCondition')
+            triggerPrice = place_order.get('triggerPrice')
+            triggerSession = place_order.get('triggerSession')
+            triggerSymbol = place_order.get('triggerSymbol')
+            validToDate = place_order.get('validToDate')
+            validity = place_order.get('validity')
+            version = place_order.get('version')
             return f'1,{accountNo},{balanceQty},{canCancel},{canChange},{cancelId},{cancelQty},{cancelTime},{cpm},{entryId},{entryTime},{icebergVol},{isStopOrderNotActivate},{matchQty},{orderNo},{Position},{Price},{priceDigit},{priceType},{qty},{rejectCode},{rejectReason},{showStatus},{Side},{status},{statusMeaning},{Symbol},{terminalType},{tfxOrderNo},{trType},{tradeDate},{transactionTime},{triggerCondition},{triggerPrice},{triggerSession},{triggerSymbol},{validToDate},{validity},{version}'
         except  SettradeError as e:
             return f'0,{e.code},{e}'

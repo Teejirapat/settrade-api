@@ -1,0 +1,2 @@
+pyfiglet==0.8.post1
+settrade_v2==2.1.4

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "c:\Users\Admin\Desktop\mt4\code python settrade\mainsettrade.py", line 118, in <module>
+    print(fig.renderText('Derivatives \n TFEX'))
+  File "c:\Users\Admin\Desktop\mt4\code python settrade\mainsettrade.py", line 88, in main_serv
+    market=INVESTOR_MARKET(time_out)
+AttributeError: 'NoneType' object has no attribute 'encode'
