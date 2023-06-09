@@ -128,7 +128,7 @@ class INVESTOR_EQUITY:
             return f'0,{e.code},{e}'
 
 
-    def palce_order(investor,account_no,pin,symbol,side,price_type,price,volume):
+    def palce_order(investor,account_no,pin,symbol,side,price_type,price,volume,validity_type):
         try:
             deri = investor.Equity(account_no=account_no)
             place_order = deri.place_order(
@@ -138,6 +138,7 @@ class INVESTOR_EQUITY:
                 price_type = price_type,
                 price = price,
                 volume = volume,
+                validity_type = validity_type,
             )
             print('place_order',place_order)
             enterId = place_order.get("enterId")

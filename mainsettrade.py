@@ -61,13 +61,13 @@ def main_serv(client,port,pin,account_no,type,time_out):
                 data=INVESTOR_EQUITY.get_orders(client,account_no)
             
             elif rec['type']=='place_order':#"{\"type\": \"place_order\",\"symbol\":\"PTT\",\"side\":\"Buy\",\"price_type\":\"MP-MTL\",\"price\":0,\"volume\":100}"
-                data=INVESTOR_EQUITY.palce_order(client,account_no,pin,rec['symbol'],rec['side'],rec['price_type'],rec['price'],rec['volume'])
+                data=INVESTOR_EQUITY.palce_order(client,account_no,pin,rec['symbol'],rec['side'],rec['price_type'],float(rec['price']),float(rec['volume']),rec['validity_type'])
             
             elif rec['type']=='change_order':#"{\"type\": \"change_order\",\"order_no\":\"string\",\"new_price\":ราคาใหม่,\"new_volume\":วอลลุ่มใหม่}"
                 data=INVESTOR_EQUITY.change_order(client,account_no,pin,rec['order_no'],rec['new_price'],rec['new_volume'])
             
             elif rec['type']=='cancel_order':#"{\"type\": \"cancel_order\",\"order_no\":\"string\"}"
-                data=INVESTOR_EQUITY.change_order(client,account_no,pin,rec['order_no'])
+                data=INVESTOR_EQUITY.cancel_order(client,account_no,pin,rec['order_no'])
             
             elif rec['type']=='cancel_orders':#"{\"type\": \"cancel_orders\",\"order_no\":[\"string\",\"string\",\"string\",\"string\"]}"
                 data=INVESTOR_EQUITY.cancel_orders(client,account_no,pin,rec['order_no'])
@@ -77,8 +77,8 @@ def main_serv(client,port,pin,account_no,type,time_out):
             data=INVESTOR_MARKET.get_quote_symbol(client,rec['symbol'])
 
         elif rec['type']=='get_market_historical':#"{\"type\": \"get_market_historical\",\"symbol\":\"PTT\",\"interval\":\"1d\",\"limit\":1,\"start\":\"YYYY-mm-ddTHH:MM\",\"end\":\"YYYY-mm-ddTHH:MM\"}"
-            market=INVESTOR_MARKET(time_out)
-            data=market.get_market_historical(client,rec['symbol'],rec['interval'],rec['limit'],rec['start'],rec['end'])
+            #market=INVESTOR_MARKET(time_out)
+            data=INVESTOR_MARKET.get_market_historical(client,rec['symbol'],rec['interval'],int(rec['limit']),rec['start'],rec['end'])
         
 
         #"{\"type\": \"get_market_realtime\",\"symbol\":\"PTT\",\"interval\":0,\"subscribe\":\"price_info\"}"

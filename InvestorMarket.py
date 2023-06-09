@@ -7,8 +7,8 @@ model = ''
 
 class INVESTOR_MARKET:
 
-    def __init__(self, time_out):
-        self.time_out = time_out
+    def __init__(self):
+        self.time_out = 1
         
     def get_quote_symbol(investor,symbol):
         try:
@@ -60,6 +60,7 @@ class INVESTOR_MARKET:
             end=end,
             normalized=True,
             )
+            #print(res)
             close = res.get('close')
             high = res.get('high')
             lastSequence = res.get('lastSequence')
